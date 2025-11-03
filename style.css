@@ -1,0 +1,141 @@
+/* General styling */
+* {
+  box-sizing: border-box;
+}
+/* Title Styling */
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Gradient for "QUICK" */
+.highlight {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark Mode Title Color Adjustments */
+body.dark #title {
+  color: #fff;
+}
+
+body.dark .highlight {
+  background: linear-gradient(90deg, #89f7fe, #66a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Theme toggle button */
+#themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#themeToggle:hover {
+  transform: scale(1.2);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 340px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background: #f3f3f3;
+  font-size: 1.8em;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.operator {
+  background: #007bff;
+  color: #fff;
+}
+
+.equal {
+  background: #28a745;
+  color: #fff;
+}
+
+.clear {
+  background: #dc3545;
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  color: #fff;
+}
+
+body.dark .calculator {
+  background: #2c2c2c;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark button {
+  background: #444;
+  color: #fff;
+}
+button:nth-child(n)[onclick*="insertPi"] {
+  background: #ff9800;
+  color: #fff;
+}
